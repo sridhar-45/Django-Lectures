@@ -1,0 +1,58 @@
+<!-- {% comment %} <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Project</title>
+    <link rel = "stylesheet" href = "{% static "css/mystyle.css" %}" />
+</head>
+<body>
+    <h1> hello programmer </h1>
+    <h1> Hi, this is a picture of Django himself ! <h1>
+    <p>{{ insert_me }} </p>
+    <img src = "{% static "images/sridhar.jpeg" %}" alt = "uh oh, didn't show!" width="300" height="400">
+</body>
+</html> {% endcomment %}
+
+{% comment %} the above code is inserting image and basic html ..web page {% endcomment %}
+
+ -->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Djnago Level Two</title>
+    <link rel = "stylesheet" href = "{% static "css/mystyle.css" %}" />
+</head>
+<body>
+    <h1> Hi Welcome to  Django Level two !</h1>
+    <h2>Here are youre access records : </h2>
+
+    <div class = "django_two">
+        {% if access_records %}
+            <table>
+                <thead>
+                    <th> Site Name</th>
+                    <th> Date Accessed</th>
+                </thead>
+
+                {% for acc in access_records %}
+                <tr>
+                    <td>{{acc.name }}</td> 
+                    <td>{{acc.date }}</td>
+                </tr>
+            {% endfor %}
+            </table> 
+        {% else %}
+            <p> No Access Records Found !</p>    
+        {% endif %}    
+
+            
+
+    </div>
+</body>
+</html>

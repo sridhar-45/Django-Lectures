@@ -1,0 +1,11 @@
+*.pyc
+__pycache__/
+db.mysql
+/media
+/staticfiles
+.vscode/
+.env
+*/migrations/*
+.gitignore/migrations/__init__.py
+.DS_Store
+Thumbs.db
